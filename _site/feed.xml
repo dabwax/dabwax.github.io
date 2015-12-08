@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dabwax</title>
+    <description>Full-stack web development from Porto Alegre, Brazil. I have 6 years experience in web technologies and my preferred languages for work is Ruby and JavaScript.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 08 Dec 2015 11:15:22 -0200</pubDate>
+    <lastBuildDate>Tue, 08 Dec 2015 11:15:22 -0200</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Another Yet Web Application with Ruby on Rails AYWAROR - Planning our first application on blog</title>
+        <description>&lt;p&gt;I’m very excited in writing this article.&lt;/p&gt;
+
+&lt;p&gt;This’ll be our first application on this blog.&lt;/p&gt;
+
+&lt;p&gt;Her name will be “Another Yet Web Application with Ruby on Rails” or “AYWAROR”.&lt;/p&gt;
+
+&lt;p&gt;We will use Ruby on Rails 4 as our mainly stack. The database layer will be MongoDB at your last version.&lt;/p&gt;
+
+&lt;p&gt;The topics we’ll talk:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1) &lt;a href=&quot;&quot;&gt;Set up Ruby on Rails 4 and MongoDB in your Linux Machine&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;2) &lt;a href=&quot;&quot;&gt;Generating our application via Terminal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;3) &lt;a href=&quot;&quot;&gt;Version control in our project: Say hi to Git and Github!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;3) &lt;a href=&quot;&quot;&gt;Planning our database and a resume about mainly concepts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;4) &lt;a href=&quot;&quot;&gt;Generating CRUDs with Rails 4 Console&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;5) &lt;a href=&quot;&quot;&gt;Say hello to Angular! Installing Angular.JS in our project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;6) &lt;a href=&quot;&quot;&gt;Adding dependencies from vendors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;7) &lt;a href=&quot;&quot;&gt;Creating the Homepage of our app&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;8) &lt;a href=&quot;&quot;&gt;Contact Page: Or how to send e-mails with Mandrill on Rails&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;9) &lt;a href=&quot;&quot;&gt;How to include CMS (or Admin Panel) in project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;10) &lt;a href=&quot;&quot;&gt;Deploying the project to a CentOS fresh install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 10:40:51 -0200</pubDate>
+        <link>http://yourdomain.com/ruby/rails/guide/ayawaror/2015/12/08/planning-our-first-guide.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/ruby/rails/guide/ayawaror/2015/12/08/planning-our-first-guide.html</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>rails</category>
+        
+        <category>guide</category>
+        
+        <category>ayawaror</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello, world!</title>
+        <description>&lt;p&gt;Hello! This is my first post in this blog. I’ve written in another one, but i’m trying to adapt my routine with experimental technologies. I’ll write some articles until this end-year about creating a brilliant web application with Ruby on Rails and Angular.JS.&lt;/p&gt;
+
+&lt;p&gt;I’m very happy with your visitation. I hope the content fit your needs.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 10:40:51 -0200</pubDate>
+        <link>http://yourdomain.com/general/2015/12/08/hello-world.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/general/2015/12/08/hello-world.html</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
+  </channel>
+</rss>
