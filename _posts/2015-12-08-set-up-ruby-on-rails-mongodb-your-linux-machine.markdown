@@ -29,7 +29,7 @@ $ source ~/.rvm/scripts/rvm
 
 * To check-up all things is working fine:
 
-{% highlight shell %}
+{% highlight %}
 // To get current Ruby version
 $ ruby -v
 
