@@ -4,7 +4,7 @@ title:  "AYWAROR - Set up Ruby on Rails 4 and MongoDB in your Linux Machine"
 date:   2015-12-08 10:40:51 -0200
 categories: ruby rails guide ayawaror
 ---
-You have so many paths to install the Ruby and the Rails gems.
+You have so many ways to install the Ruby and the Rails gems.
 
 I'll talk here about my preferred one: The [RVM](http://rvm.io/). Is a CLI which allows you to easily install, manage and work with multiple ruby environments. In this way, this tool makes the installation step pretty easy.
 
@@ -28,14 +28,15 @@ $ source ~/.rvm/scripts/rvm
 * Now install the Rails: `gem install rails`.
 
 * To check-up all things is working fine:
+
 ```
-# To get current Ruby version
+// To get current Ruby version
 $ ruby -v
 
-# To get current Rails version
+// To get current Rails version
 $ rails -v
 
-# To discover where the bin of ruby is localizated:
+// To discover where the bin of ruby is localizated:
 $ which ruby
 ```
 
