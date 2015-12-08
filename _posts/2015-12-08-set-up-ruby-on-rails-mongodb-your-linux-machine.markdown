@@ -4,11 +4,11 @@ title:  "AYWAROR - Set up Ruby on Rails 4 and MongoDB in your Linux Machine"
 date:   2015-12-08 10:40:51 -0200
 categories: ruby rails guide ayawaror
 ---
-You have so many ways to install the Ruby and the Rails gems.
+You have so many ways to install the *Ruby* and the *Rails* gems.
 
-I'll talk here about my preferred one: The [RVM](http://rvm.io/). Is a CLI which allows you to easily install, manage and work with multiple ruby environments. In this way, this tool makes the installation step pretty easy.
+I'll talk here about my preferred one: The **[RVM](http://rvm.io/)**. Is a *CLI* which allows you to easily install, manage and work with multiple ruby environments. In this way, this tool makes the installation step pretty easy.
 
-This step-by-step works well on Ubuntu distro, but will work fine in any Linux distro.
+This step-by-step works well on *Ubuntu* distro, but will work fine in any Linux distro.
 
 * Install RVM:
 ```
@@ -29,7 +29,7 @@ $ source ~/.rvm/scripts/rvm
 
 * To check-up all things is working fine:
 
-```
+{% highlight shell %}
 // To get current Ruby version
 $ ruby -v
 
@@ -38,7 +38,7 @@ $ rails -v
 
 // To discover where the bin of ruby is localizated:
 $ which ruby
-```
+{% endhighlight %}
 
 Now you have Ruby and Rails on latest verions available in your machine. Congratulations!
 
@@ -74,7 +74,7 @@ $ sudo mkdir /data/db
 $ sudo service mongod start
 ```
 
-Congratulations! Now you have Rails and MongoDB installed on the best way! It will work fine as fuck.
+**Congratulations**! Now you have *Rails* and *MongoDB* installed on the best way! It will work fine as fuck.
 
 In the next topic, i will explain about generating a new application with Rails console and with MongoDB as default ORM.
 
