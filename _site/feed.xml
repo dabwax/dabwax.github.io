@@ -2,13 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dabwax</title>
-    <description>Full-stack web development from Porto Alegre, Brazil. I have 6 years experience in web technologies and my preferred languages for work is Ruby and JavaScript.
+    <description>Full-stack web developer specialized in Software Engineer from Porto Alegre, Brazil. I have 6 years experience in web technologies and my preferred languages for work is Ruby and JavaScript.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Dec 2015 11:15:22 -0200</pubDate>
-    <lastBuildDate>Tue, 08 Dec 2015 11:15:22 -0200</lastBuildDate>
+    <pubDate>Wed, 09 Dec 2015 13:43:48 -0200</pubDate>
+    <lastBuildDate>Wed, 09 Dec 2015 13:43:48 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>AYWAROR - Set up Ruby on Rails 4 and MongoDB in your Linux Machine</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;You have so many ways to install the &lt;em&gt;Ruby&lt;/em&gt; and the &lt;em&gt;Rails&lt;/em&gt; gems.&lt;/p&gt;
+
+&lt;p&gt;I’ll talk here about my preferred one: The &lt;strong&gt;&lt;a href=&quot;http://rvm.io/&quot;&gt;RVM&lt;/a&gt;&lt;/strong&gt;. Is a &lt;em&gt;CLI&lt;/em&gt; which allows you to easily install, manage and work with multiple ruby environments. In this way, this tool makes the installation step pretty easy.&lt;/p&gt;
+
+&lt;p&gt;This step-by-step works well on &lt;em&gt;Ubuntu&lt;/em&gt; distro, but will work fine in any Linux distro.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-ruby-and-rails&quot;&gt;Installing Ruby and Rails&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install RVM:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;url -sSL https://get.rvm.io | bash -s stable
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.rvm/scripts/rvm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;You can append “–ruby –rails” to install the latest versions from these. But we will try another approach:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm list known&lt;/code&gt; to discover the current rubies available. Actually, the current version is 2.2-head.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm install 2.2-head&lt;/code&gt;. It will install the Ruby 2.2 and all dependencies.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm use 2.2-head --default&lt;/code&gt;. To set 2.2 as default version.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now install the Rails: &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install rails&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;check-if-everything-is-okay&quot;&gt;Check if everything is okay&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;To check-up all things is working fine:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;// To get current Ruby version
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;ruby -v
+
+// To get current Rails version
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;rails -v
+
+// To discover where the bin of ruby is localizated:
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;which ruby&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you have Ruby and Rails on latest verions available in your machine. Congratulations!&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-mongodb&quot;&gt;Installing MongoDB&lt;/h2&gt;
+
+&lt;p&gt;MongoDB is the NoSQL Database layer that we will use in our application.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Import MongoDB public key into your package management system:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a list file for MongoDB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen&#39;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/mongodb.list&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now reload the package database:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now install MongoDB with apt:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo apt-get install -y mongodb-org&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create the folder where data will be storaged:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo mkdir /data/db&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Now we can start the MongoDB service:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;sudo service mongod start&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Congratulations&lt;/strong&gt;! Now you have &lt;em&gt;Rails&lt;/em&gt; and &lt;em&gt;MongoDB&lt;/em&gt; installed on the best way! It will work fine as fuck.&lt;/p&gt;
+
+&lt;p&gt;In the next topic, i will explain about generating a new application with Rails console and with MongoDB as default ORM.&lt;/p&gt;
+
+&lt;p&gt;Thanks for you attention,
+Cheers.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 10:40:51 -0200</pubDate>
+        <link>http://yourdomain.com/ruby/rails/guide/ayawaror/2015/12/08/set-up-ruby-on-rails-mongodb-your-linux-machine.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/ruby/rails/guide/ayawaror/2015/12/08/set-up-ruby-on-rails-mongodb-your-linux-machine.html</guid>
+        
+        
+        <category>ruby</category>
+        
+        <category>rails</category>
+        
+        <category>guide</category>
+        
+        <category>ayawaror</category>
+        
+      </item>
     
       <item>
         <title>Another Yet Web Application with Ruby on Rails AYWAROR - Planning our first application on blog</title>

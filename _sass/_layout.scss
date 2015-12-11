@@ -2,21 +2,38 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    background: #F7CA18;
+    min-height: 70px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    a {
+        color: #FFF !important;
+    }
+}
+
+a {
+    background: #F7CA18 !important;
+    color: #FFF !important;
+    margin: 0px 5px;
+    padding: 3px 6px;
+    font-weight: bold;
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 300;
-    line-height: 56px;
+    line-height: 60px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    font-family: 'Caveat Brush' !important;
+    text-decoration: none !important;
+
+    &:hover {
+        color: #1E8BC3 !important;
+    }
 
     &,
     &:visited {

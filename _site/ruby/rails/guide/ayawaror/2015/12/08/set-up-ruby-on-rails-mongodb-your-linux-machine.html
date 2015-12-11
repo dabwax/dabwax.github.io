@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hello, world!</title>
-  <meta name="description" content="Hello! This is my first post in this blog. I’ve written in another one, but i’m trying to adapt my routine with experimental technologies. I’ll write some ar...">
+  <title>AYWAROR - Set up Ruby on Rails 4 and MongoDB in your Linux Machine</title>
+  <meta name="description" content="Introduction">
   
   <link href='https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/general/2015/12/08/hello-world.html">
+  <link rel="canonical" href="http://yourdomain.com/ruby/rails/guide/ayawaror/2015/12/08/set-up-ruby-on-rails-mongodb-your-linux-machine.html">
   <link rel="alternate" type="application/rss+xml" title="dabwax" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -58,14 +58,109 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Hello, world!</h1>
+    <h1 class="post-title" itemprop="name headline">AYWAROR - Set up Ruby on Rails 4 and MongoDB in your Linux Machine</h1>
     <p class="post-meta"><time datetime="2015-12-08T10:40:51-02:00" itemprop="datePublished">Dec 8, 2015</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>Hello! This is my first post in this blog. I’ve written in another one, but i’m trying to adapt my routine with experimental technologies. I’ll write some articles until this end-year about creating a brilliant web application with Ruby on Rails and Angular.JS.</p>
+    <h2 id="introduction">Introduction</h2>
 
-<p>I’m very happy with your visitation. I hope the content fit your needs.</p>
+<p>You have so many ways to install the <em>Ruby</em> and the <em>Rails</em> gems.</p>
+
+<p>I’ll talk here about my preferred one: The <strong><a href="http://rvm.io/">RVM</a></strong>. Is a <em>CLI</em> which allows you to easily install, manage and work with multiple ruby environments. In this way, this tool makes the installation step pretty easy.</p>
+
+<p>This step-by-step works well on <em>Ubuntu</em> distro, but will work fine in any Linux distro.</p>
+
+<h2 id="installing-ruby-and-rails">Installing Ruby and Rails</h2>
+
+<ul>
+  <li>Install RVM:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+<span class="gp">$ </span><span class="se">\c</span>url -sSL https://get.rvm.io | bash -s stable
+<span class="gp">$ </span><span class="nb">source</span> ~/.rvm/scripts/rvm</code></pre></figure>
+
+<ul>
+  <li>
+    <p>You can append “–ruby –rails” to install the latest versions from these. But we will try another approach:</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">rvm list known</code> to discover the current rubies available. Actually, the current version is 2.2-head.</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">rvm install 2.2-head</code>. It will install the Ruby 2.2 and all dependencies.</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">rvm use 2.2-head --default</code>. To set 2.2 as default version.</p>
+  </li>
+  <li>
+    <p>Now install the Rails: <code class="highlighter-rouge">gem install rails</code>.</p>
+  </li>
+</ul>
+
+<h2 id="check-if-everything-is-okay">Check if everything is okay</h2>
+<ul>
+  <li>To check-up all things is working fine:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">// To get current Ruby version
+<span class="gp">$ </span>ruby -v
+
+// To get current Rails version
+<span class="gp">$ </span>rails -v
+
+// To discover where the bin of ruby is localizated:
+<span class="gp">$ </span>which ruby</code></pre></figure>
+
+<p>Now you have Ruby and Rails on latest verions available in your machine. Congratulations!</p>
+
+<h2 id="installing-mongodb">Installing MongoDB</h2>
+
+<p>MongoDB is the NoSQL Database layer that we will use in our application.</p>
+
+<ul>
+  <li>Import MongoDB public key into your package management system:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10</code></pre></figure>
+
+<ul>
+  <li>Create a list file for MongoDB</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'</span> | sudo tee /etc/apt/sources.list.d/mongodb.list</code></pre></figure>
+
+<ul>
+  <li>Now reload the package database:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-get update</code></pre></figure>
+
+<ul>
+  <li>Now install MongoDB with apt:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-get install -y mongodb-org</code></pre></figure>
+
+<ul>
+  <li>Create the folder where data will be storaged:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo mkdir /data/db</code></pre></figure>
+
+<ul>
+  <li>Now we can start the MongoDB service:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo service mongod start</code></pre></figure>
+
+<p><strong>Congratulations</strong>! Now you have <em>Rails</em> and <em>MongoDB</em> installed on the best way! It will work fine as fuck.</p>
+
+<p>In the next topic, i will explain about generating a new application with Rails console and with MongoDB as default ORM.</p>
+
+<p>Thanks for you attention,
+Cheers.</p>
 
   </div>
 
