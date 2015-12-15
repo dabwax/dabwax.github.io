@@ -77,7 +77,7 @@
   <li>Install RVM:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 <span class="gp">$ </span><span class="se">\c</span>url -sSL https://get.rvm.io | bash -s stable
 <span class="gp">$ </span><span class="nb">source</span> ~/.rvm/scripts/rvm</code></pre></figure>
 
@@ -104,7 +104,7 @@
   <li>To check-up all things is working fine:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">// To get current Ruby version
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">// To get current Ruby version
 <span class="gp">$ </span>ruby -v
 
 // To get current Rails version
@@ -123,37 +123,37 @@
   <li>Import MongoDB public key into your package management system:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10</code></pre></figure>
 
 <ul>
   <li>Create a list file for MongoDB</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'</span> | sudo tee /etc/apt/sources.list.d/mongodb.list</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">echo</span> <span class="s1">'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'</span> | sudo tee /etc/apt/sources.list.d/mongodb.list</code></pre></figure>
 
 <ul>
   <li>Now reload the package database:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-get update</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-get update</code></pre></figure>
 
 <ul>
   <li>Now install MongoDB with apt:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo apt-get install -y mongodb-org</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-get install -y mongodb-org</code></pre></figure>
 
 <ul>
   <li>Create the folder where data will be storaged:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo mkdir /data/db</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo mkdir /data/db</code></pre></figure>
 
 <ul>
   <li>Now we can start the MongoDB service:</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>sudo service mongod start</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo service mongod start</code></pre></figure>
 
 <p><strong>Congratulations</strong>! Now you have <em>Rails</em> and <em>MongoDB</em> installed on the best way! It will work fine as fuck.</p>
 

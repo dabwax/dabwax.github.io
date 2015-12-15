@@ -15,7 +15,7 @@ This step-by-step works well on *Ubuntu* distro, but will work fine in any Linux
 ## Installing Ruby and Rails
 
 * Install RVM:
-{% highlight shell %}
+{% highlight bash %}
 $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 $ \curl -sSL https://get.rvm.io | bash -s stable
 $ source ~/.rvm/scripts/rvm
@@ -34,7 +34,7 @@ $ source ~/.rvm/scripts/rvm
 ## Check if everything is okay
 * To check-up all things is working fine:
 
-{% highlight shell %}
+{% highlight bash %}
 // To get current Ruby version
 $ ruby -v
 
@@ -52,32 +52,32 @@ Now you have Ruby and Rails on latest verions available in your machine. Congrat
 MongoDB is the NoSQL Database layer that we will use in our application.
 
 * Import MongoDB public key into your package management system:
-{% highlight shell %}
+{% highlight bash %}
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 {% endhighlight %}
 
 * Create a list file for MongoDB
-{% highlight shell %}
+{% highlight bash %}
 $ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 {% endhighlight %}
 
 * Now reload the package database:
-{% highlight shell %}
+{% highlight bash %}
 $ sudo apt-get update
 {% endhighlight %}
 
 * Now install MongoDB with apt:
-{% highlight shell %}
+{% highlight bash %}
 $ sudo apt-get install -y mongodb-org
 {% endhighlight %}
 
 * Create the folder where data will be storaged:
-{% highlight shell %}
+{% highlight bash %}
 $ sudo mkdir /data/db
 {% endhighlight %}
 
 * Now we can start the MongoDB service:
-{% highlight shell %}
+{% highlight bash %}
 $ sudo service mongod start
 {% endhighlight %}
 
